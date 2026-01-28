@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chúc mừng sinh nhật - Trang web chúc mừng sinh nhật đặc biệt với hiệu ứng tuyệt đẹp">
+    <title>🎉 Chúc Mừng Sinh Nhật! 🎂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Balloons Container -->
+    <div class="balloons-container" id="balloonsContainer"></div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Fireworks Container -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="content-wrapper">
+            <!-- Cake Icon -->
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="cake-layer layer-top"></div>
+                    <div class="cake-layer layer-middle"></div>
+                    <div class="cake-layer layer-bottom"></div>
+                </div>
+                <p class="wish-text">🎂 Hãy ước một điều!</p>
+            </div>
+
+
+
+            <!-- Birthday Message -->
+            <h1 class="birthday-title">
+                <span class="letter">C</span>
+                <span class="letter">h</span>
+                <span class="letter">ú</span>
+                <span class="letter">c</span>
+                <span class="letter"> </span>
+                <span class="letter">M</span>
+                <span class="letter">ừ</span>
+                <span class="letter">n</span>
+                <span class="letter">g</span>
+                <br>
+                <span class="letter">S</span>
+                <span class="letter">i</span>
+                <span class="letter">n</span>
+                <span class="letter">h</span>
+                <span class="letter"> </span>
+                <span class="letter">N</span>
+                <span class="letter">h</span>
+                <span class="letter">ậ</span>
+                <span class="letter">t</span>
+                <span class="emoji">🎉</span>
+            </h1>
+
+            <p class="birthday-message">
+                Chúc bạn một ngày sinh nhật thật đặc biệt!<br>
+                Tuổi mới hạnh phúc, thành công và tràn đầy niềm vui! 🎂✨
+            </p>
+
+            <!-- Interactive Buttons -->
+            <div class="button-group">
+                <button class="btn btn-primary" id="celebrateBtn">
+                    <span class="btn-text">🎊 Bắt Đầu Tiệc</span>
+                </button>
+                <button class="btn btn-secondary" id="musicBtn">
+                    <span class="btn-text">🎵 Nhạc Sinh Nhật</span>
+                </button>
+            </div>
+
+            <!-- Wishes Section -->
+            <div class="wishes-section">
+                <h2 class="wishes-title">💝 Lời Chúc Đặc Biệt</h2>
+                <div class="wishes-grid">
+                    <div class="wish-card">
+                        <div class="wish-icon">🌟</div>
+                        <p>Mong ước của bạn sẽ thành hiện thực</p>
+                    </div>
+                    <div class="wish-card">
+                        <div class="wish-icon">💖</div>
+                        <p>Luôn tràn đầy yêu thương và hạnh phúc</p>
+                    </div>
+                    <div class="wish-card">
+                        <div class="wish-icon">🎯</div>
+                        <p>Đạt được mọi mục tiêu đã đề ra</p>
+                    </div>
+                    <div class="wish-card">
+                        <div class="wish-icon">🌈</div>
+                        <p>Cuộc sống luôn rực rỡ sắc màu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery Section -->
+            <div class="gallery-section">
+                <h2 class="gallery-title">📸 Khoảnh Khắc Đáng Nhớ</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="photo1.jpg" alt="Birthday Photo 1" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🎉</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photo2.png" alt="Birthday Photo 2" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">💖</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photo3.png" alt="Birthday Photo 3" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">✨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gift Box -->
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid">
+                        <div class="gift-bow"></div>
+                    </div>
+                    <div class="gift-body"></div>
+                </div>
+                <p class="gift-text">🎁 Click vào hộp quà!</p>
+            </div>
+            <!-- Scrolling Message -->
+            <div class="scrolling-container">
+                <div class="scrolling-text">
+                    <span>From ACEs Fabbi F13 with love! 💖</span>
+                    <span>From ACEs Fabbi F13 with love! 💖</span>
+                    <span>From ACEs Fabbi F13 with love! 💖</span>
+                    <span>From ACEs Fabbi F13 with love! 💖</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element (Hidden) -->
+    <audio id="birthdayMusic" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4a26f03c3a.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
